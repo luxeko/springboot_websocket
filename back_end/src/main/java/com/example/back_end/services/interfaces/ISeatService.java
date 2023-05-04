@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface ISeatService {
     public List<SeatEntity> getListSeatsByBusId(int busId);
+
     public void saveSeat(SeatEntity seat);
+
     public void deleteSeat(SeatEntity seat);
 }

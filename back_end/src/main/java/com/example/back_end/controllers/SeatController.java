@@ -31,11 +31,12 @@ public class SeatController {
         dto.setData(lsSeat);
         return ResponseEntity.ok(dto);
     }
+
     @PostMapping(value = "/{busId}")
     @Transactional(rollbackOn = {Exception.class, Throwable.class})
     public ResponseEntity<?> save(@PathVariable("busId") int busId, @RequestBody SeatDTO seatDTO) {
         List<SeatEntity> ls = seatDTO.getLsSeat();
-        for (SeatEntity s: ls) {
+        for (SeatEntity s : ls) {
             SeatEntity seat = new SeatEntity();
             seat.setId(s.getId());
             seat.setSeatCode(s.getSeatCode());

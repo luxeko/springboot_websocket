@@ -1,7 +1,6 @@
 package com.example.back_end.entities;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Objects;
 
@@ -16,11 +15,11 @@ public class BusEntity {
     @Column(name = "bus_name")
     private String busName;
     @Basic
-    @Column(name = "license_ plates")
+    @Column(name = "license_plates")
     private String licensePlates;
     @Basic
     @Column(name = "seat_quantity")
-    private Integer seatQuantity;
+    private int seatQuantity;
     @Basic
     @Column(name = "created_at")
     private Date createdAt;
@@ -49,11 +48,11 @@ public class BusEntity {
         this.licensePlates = licensePlates;
     }
 
-    public Integer getSeatQuantity() {
+    public int getSeatQuantity() {
         return seatQuantity;
     }
 
-    public void setSeatQuantity(Integer seatQuantity) {
+    public void setSeatQuantity(int seatQuantity) {
         this.seatQuantity = seatQuantity;
     }
 

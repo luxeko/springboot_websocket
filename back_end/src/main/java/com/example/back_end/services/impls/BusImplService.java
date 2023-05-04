@@ -15,6 +15,7 @@ import java.util.Optional;
 public class BusImplService implements IBusService {
     @Autowired
     private BusRepository busRepository;
+
     @Override
     public List<BusEntity> getListBusByKeyword(String keyword) {
         return busRepository.findByQuery(keyword);

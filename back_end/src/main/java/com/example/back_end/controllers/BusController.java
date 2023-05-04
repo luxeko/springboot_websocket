@@ -45,6 +45,7 @@ public class BusController {
         }
         return ResponseEntity.notFound().build();
     }
+
     @DeleteMapping(value = "")
     public ResponseEntity<?> delete(@RequestParam int id) {
         Optional<BusEntity> op = busImplService.getBusById(id);
@@ -59,6 +60,7 @@ public class BusController {
         }
         return ResponseEntity.notFound().build();
     }
+
     @PostMapping(value = "")
     public ResponseEntity<?> save(@RequestBody BusEntity bus) {
         ResponseDTO responseDTO = new ResponseDTO();
